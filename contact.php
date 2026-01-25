@@ -578,7 +578,7 @@ include_once 'includes/header.php';
                             <i class="fab fa-whatsapp"></i>
                             <div>
                                 <strong>WhatsApp:</strong><br>
-                                +55 234 67879 890
+                             +55-41-99113-5570
                             </div>
                         </div>
                         <a href="https://wa.me/5523467879890" target="_blank" class="whatsapp-btn">
