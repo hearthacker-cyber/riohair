@@ -447,7 +447,7 @@ include_once 'includes/header.php';
                     </li>
                  
                     <!-- Language Selector -->
-                    <li class="nav-item language-selector">
+                    <!-- <li class="nav-item language-selector">
                         <button class="nav-link language-btn" id="languageBtn">
                             <i class="fas fa-language"></i> English
                         </button>
@@ -464,16 +464,9 @@ include_once 'includes/header.php';
                                 <img src="https://flagcdn.com/w20/it.png" class="flag-icon" alt="Italian">
                                 Italiano
                             </div>
-                            <!-- <div class="language-option" data-lang="pt">
-                                <img src="https://flagcdn.com/w20/pt.png" class="flag-icon" alt="Portuguese">
-                                Português
-                            </div>
-                            <div class="language-option" data-lang="es">
-                                <img src="https://flagcdn.com/w20/es.png" class="flag-icon" alt="Spanish">
-                                Español
-                            </div> -->
+                       
                         </div>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </div>
