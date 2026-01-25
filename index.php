@@ -597,24 +597,26 @@ include_once 'includes/header.php';
 </section>
         <!-- Hero Banner Section -->
         <!-- Hero Banner Section -->
-        <section class="hero-banner-section">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-10 col-xl-8">
-                        <h1>RioHairCo.</h1>
-                        <div class="tagline">Processors & Exporters<br>
-                            <small>(Trasformatori ed esportatori)<br>
-                            (Processeurs et exportateurs)</small>
-                        </div>
-                        <div class="highlight mb-4">100% ethically sourced human hair, processed to top global standards<br>
-                            <small>(Capelli umani di provenienza etica al 100%, lavorati secondo i migliori standard globali)<br>
-                            (Cheveux humains 100 % issus de sources éthiques, traités selon les normes mondiales les plus strictes)</small>
-                        </div>
-                        <a href="product.php" class="btn btn-hero">Explore our Products</a>
-                    </div>
+ <section class="hero-banner-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 col-xl-8">
+                <h1>RioHairCo,</h1>
+                <div class="tagline">Processors and Exporters<br>
+                    <small>(Transformateurs et exportateurs)<br>
+                    (Trasformatori ed esportatori)<br>
+                    (Verarbeiter und Exporteure)</small>
                 </div>
+                <div class="highlight mb-4">Ethically sourced human hair for global extension users<br>
+                    <small>(Cheveux humains d'origine éthique pour les utilisateurs d'extensions mondiales)<br>
+                    (Capelli umani ottenuti eticamente per utenti globali di extension)<br>
+                    (Ethisch gewonnenes menschliches Haar für globale Extension-Nutzer)</small>
+                </div>
+                <a href="product.php" class="btn btn-hero">Explore our Products</a>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
         <style>
             /* Add to your hero-banner-section CSS */
     .hero-banner-section .tagline small,

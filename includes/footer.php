@@ -25,7 +25,7 @@
                 <h5>Contact Info</h5>
                 <p><i class="fas fa-envelope me-2"></i> info@riohairco.com</p>
                 <p><i class="fas fa-envelope me-2"></i> exports@riohairco.com</p>
-                <p><i class="fas fa-phone me-2"></i> +1 (555) 123-4567</p>
+                <p><i class="fas fa-phone me-2"></i> (+91) 79974 93487  </p>
             </div>
         </div>
         <div class="row">

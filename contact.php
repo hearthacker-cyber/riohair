@@ -524,7 +524,7 @@ include_once 'includes/header.php';
                             <i class="fab fa-whatsapp"></i>
                             <div>
                                 <strong>WhatsApp:</strong><br>
-                                +91 98410 22567
+                             (+91) 79974 93487 
                             </div>
                         </div>
                         <a href="https://wa.me/919841022567" target="_blank" class="whatsapp-btn">
