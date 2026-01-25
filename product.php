@@ -64,7 +64,7 @@ include_once 'includes/header.php';
         
         /* Page Header */
         .page-header {
-            background: linear-gradient(rgba(59, 47, 47, 0.85), rgba(59, 47, 47, 0.9)), url('https://images.unsplash.com/photo-1605497788044-5a32c7078486?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background: linear-gradient(rgba(59, 47, 47, 0.85), rgba(59, 47, 47, 0.9));
             background-size: cover;
             background-position: center;
             color: white;
@@ -420,12 +420,13 @@ include_once 'includes/header.php';
                                     </a>
                                 </div>
                                 <div class="image-placeholder" style="display: none;">
+                                   <img src="/images/32(2).jpg" alt="Natural Hair Image 1" class="slider-image active">
+                                    </a>
+                                </div>
+                                 <div class="image-placeholder" style="display: none;">
                                    <img src="/images/10.jpg" alt="Natural Hair Image 1" class="slider-image active">
                                     </a>
                                 </div>
-                                <!-- <div class="image-placeholder" style="display: none;">
-                                    Image 3 - Natural Hair
-                                </div> -->
                             </div>
                             
                             <div class="slider-nav">
@@ -440,7 +441,7 @@ include_once 'includes/header.php';
                             <div class="slider-dots">
                                 <span class="dot active" data-index="0"></span>
                                 <span class="dot" data-index="1"></span>
-                                <!-- <span class="dot" data-index="2"></span> -->
+                                <span class="dot" data-index="2"></span>
                             </div>
                         </div>
                     </div>
@@ -493,11 +494,12 @@ include_once 'includes/header.php';
                                     <img src="/images/3.jpg" alt="Blonde Hair Image 1" class="slider-image active">
                                 </div>
                                 <div class="image-placeholder" style="display: none;">
+                                   <img src="/images/32(3).jpg" alt="Blonde Hair Image 1" class="slider-image active">
+                                </div>
+                                   <div class="image-placeholder" style="display: none;">
                                    <img src="/images/pony.png" alt="Blonde Hair Image 1" class="slider-image active">
                                 </div>
-                                <!-- <div class="image-placeholder" style="display: none;">
-                                    Image 3 - Blonde Hair
-                                </div> -->
+                              
                             </div>
                             
                             <div class="slider-nav">
@@ -512,7 +514,7 @@ include_once 'includes/header.php';
                             <div class="slider-dots">
                                 <span class="dot active" data-index="0"></span>
                                 <span class="dot" data-index="1"></span>
-                                <!-- <span class="dot" data-index="2"></span> -->
+                                <span class="dot" data-index="2"></span>
                             </div>
                         </div>
                     </div>
@@ -563,9 +565,9 @@ include_once 'includes/header.php';
                                 <div class="image-placeholder" style="display: none;">
                                     <img src="/images/2.jpg" alt="Weaves Image 2" class="slider-image active">
                                 </div>
-                                <!-- <div class="image-placeholder" style="display: none;">
-                                    Image 3 - Weaves
-                                </div> -->
+                              <div class="image-placeholder" style="display: none;">
+                                    <img src="/images/32(4).jpg" alt="Weaves Image 2" class="slider-image active">
+                                </div>
                             </div>
                             
                             <div class="slider-nav">
@@ -580,7 +582,7 @@ include_once 'includes/header.php';
                             <div class="slider-dots">
                                 <span class="dot active" data-index="0"></span>
                                 <span class="dot" data-index="1"></span>
-                                <!-- <span class="dot" data-index="2"></span> -->
+                                <span class="dot" data-index="2"></span>
                             </div>
                         </div>
                     </div>
@@ -636,11 +638,12 @@ include_once 'includes/header.php';
                                    <img src="/images/4.jpg" class="slider-image active">                
                                 </div>
                                 <div class="image-placeholder" >
+                                     <img src="/images/32(1).jpg" class="slider-image active">  
+                                </div>
+                                  <div class="image-placeholder" >
                                      <img src="/images/11.jpg" class="slider-image active">  
                                 </div>
-                                <!-- <div class="image-placeholder" style="display: none;">
-                                    Image 3 - Clip Extensions
-                                </div> -->
+                              
                             </div>
                             
                             <div class="slider-nav">
@@ -655,7 +658,7 @@ include_once 'includes/header.php';
                             <div class="slider-dots">
                                 <span class="dot active" data-index="0"></span>
                                 <span class="dot" data-index="1"></span>
-                                <!-- <span class="dot" data-index="2"></span> -->
+                                <span class="dot" data-index="2"></span>
                             </div>
                         </div>
                     </div>
