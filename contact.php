@@ -489,7 +489,7 @@ include_once 'includes/header.php';
             <h2 class="section-title">About Us</h2>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>RioHairCo. is a leading processor and exporter of natural human hair with <strong>26 years of experience</strong> in the industry, operating from India and Brazil. Our products primarily serve clients in Brazil, Europe, and the Middle East.</p>
+                    <p>RioHairCo. is a leading processor and exporter of natural human hair with <strong>26 years of experience</strong> in the industry, operating from India and Brazil. Our products primarily serve clients in Brazil, Europe, Canada, and the Middle East.</p>
                     
                     <p>The Dubai office manages inventory and oversees exports, ensuring efficient and timely shipping across Europe. We source hair directly from donors in India and selected regions in Amazonas, Brazil, process it at our facilities, and handle all export logistics.</p>
                     
