@@ -638,10 +638,10 @@ include_once 'includes/header.php';
                                    <img src="/images/4.jpg" class="slider-image active">                
                                 </div>
                                 <div class="image-placeholder" >
-                                     <img src="/images/32(1).jpg" class="slider-image active">  
+                                     <img src="/images/clip.jpg" class="slider-image active">  
                                 </div>
                                   <div class="image-placeholder" >
-                                     <img src="/images/11.jpg" class="slider-image active">  
+                                     <img src="/images/model.jpeg" class="slider-image active">  
                                 </div>
                               
                             </div>
