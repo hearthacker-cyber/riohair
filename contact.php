@@ -630,65 +630,50 @@ include_once 'includes/header.php';
         </div>
     </section>
 
-    <!-- Contact Form Section -->
-    <section class="contact-form-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <div class="contact-form">
-                        <h2 class="section-title text-center">Send Us a Message</h2>
-                        <p class="text-center mb-4">Prefer to send an email directly? Use the form below and we'll respond promptly.</p>
-                        
-                        <form id="contactForm">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
-                                    </div>
+<!-- Contact Form Section -->
+<section class="contact-form-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="contact-form">
+                    <h2 class="section-title text-center">Send Us a Message</h2>
+                    <p class="text-center mb-4">Prefer to send an email directly? Use the form below and we'll respond promptly.</p>
+                    
+                    <!-- Simple form that opens email client -->
+                    <form id="contactForm" action="mailto:info@riohairco.com" method="GET" enctype="text/plain">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="subject" placeholder="Subject" required>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input type="email" class="form-control" id="email" placeholder="Email Address" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input type="tel" class="form-control" id="phone" placeholder="Phone Number">
-                                    </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" name="from" placeholder="Your Email" required>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="company" placeholder="Company Name (Optional)">
-                            </div>
-                            <div class="form-group">
-                                <select class="form-control" id="inquiryType" required>
-                                    <option value="">Select Inquiry Type</option>
-                                    <option value="wholesale">Wholesale Inquiry</option>
-                                    <option value="sample">Sample Request</option>
-                                    <option value="product">Product Information</option>
-                                    <option value="distribution">Distribution Partnership</option>
-                                    <option value="general">General Question</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <textarea class="form-control" id="message" placeholder="Your Message" required></textarea>
-                            </div>
-                            <button type="submit" class="btn-submit mt-3">
-                                <i class="fas fa-paper-plane me-2"></i> Send Message
-                            </button>
-                        </form>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" name="body" placeholder="Your Message" rows="6" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit mt-3">
+                            <i class="fas fa-paper-plane me-2"></i> Send Message via Email
+                        </button>
+                    </form>
+                    
+                    <!-- Alternative direct email link -->
+                    <div class="text-center mt-4">
+                        <p class="mb-2">Or contact us directly:</p>
+                        <a href="mailto:info@riohairco.com?subject=Contact%20from%20RioHairCo%20Website&body=Dear%20RioHairCo%20Team,%0D%0A%0D%0A" 
+                           class="btn btn-outline-secondary">
+                            <i class="fas fa-envelope me-2"></i> info@riohairco.com
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
 <?php include_once 'includes/footer.php'; ?>
     <!-- Load Google Translate Script -->
