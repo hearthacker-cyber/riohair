@@ -639,41 +639,109 @@ include_once 'includes/header.php';
                     <h2 class="section-title text-center">Send Us a Message</h2>
                     <p class="text-center mb-4">Prefer to send an email directly? Use the form below and we'll respond promptly.</p>
                     
-                    <!-- Simple form that opens email client -->
-                    <form id="contactForm" action="mailto:info@riohairco.com" method="GET" enctype="text/plain">
+                    <form id="contactForm" onsubmit="return sendEmail()">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+                                    <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name" required>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="email" class="form-control" name="from" placeholder="Your Email" required>
+                                    <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Email Address" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone Number">
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control" name="body" placeholder="Your Message" rows="6" required></textarea>
+                            <input type="text" class="form-control" id="company" name="company" placeholder="Company Name (Optional)">
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control" id="inquiryType" name="inquiryType" required>
+                                <option value="">Select Inquiry Type</option>
+                                <option value="wholesale">Wholesale Inquiry</option>
+                                <option value="sample">Sample Request</option>
+                                <option value="product">Product Information</option>
+                                <option value="distribution">Distribution Partnership</option>
+                                <option value="general">General Question</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" id="message" name="message" placeholder="Your Message" required></textarea>
                         </div>
                         <button type="submit" class="btn-submit mt-3">
-                            <i class="fas fa-paper-plane me-2"></i> Send Message via Email
+                            <i class="fas fa-paper-plane me-2"></i> Send Message
                         </button>
                     </form>
-                    
-                    <!-- Alternative direct email link -->
-                    <div class="text-center mt-4">
-                        <p class="mb-2">Or contact us directly:</p>
-                        <a href="mailto:info@riohairco.com?subject=Contact%20from%20RioHairCo%20Website&body=Dear%20RioHairCo%20Team,%0D%0A%0D%0A" 
-                           class="btn btn-outline-secondary">
-                            <i class="fas fa-envelope me-2"></i> info@riohairco.com
-                        </a>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<script>
+function sendEmail() {
+    // Get all form values
+    const firstName = document.getElementById('firstName').value;
+    const lastName = document.getElementById('lastName').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const company = document.getElementById('company').value;
+    const inquiryType = document.getElementById('inquiryType').value;
+    const message = document.getElementById('message').value;
+    
+    // Get inquiry type text
+    const inquiryText = document.getElementById('inquiryType').options[document.getElementById('inquiryType').selectedIndex].text;
+    
+    // Create email subject
+    const subject = `RioHairCo Contact - ${inquiryText} - ${firstName} ${lastName}`;
+    
+    // Create formatted email body
+    const body = `NEW CONTACT FORM SUBMISSION
+===============================
+
+CONTACT INFORMATION:
+-------------------
+Name: ${firstName} ${lastName}
+Email: ${email}
+Phone: ${phone || 'Not provided'}
+Company: ${company || 'Not provided'}
+
+INQUIRY DETAILS:
+----------------
+Type: ${inquiryText}
+Date: ${new Date().toLocaleDateString()}
+
+MESSAGE:
+--------
+${message}
+
+===============================
+Sent from RioHairCo Contact Form
+Website: ${window.location.hostname}`;
+    
+    // Encode for URL
+    const encodedSubject = encodeURIComponent(subject);
+    const encodedBody = encodeURIComponent(body);
+    
+    // Open email client with pre-filled email
+    window.location.href = `mailto:info@riohairco.com?subject=${encodedSubject}&body=${encodedBody}`;
+    
+    // Don't actually submit the form
+    return false;
+}
+</script>
 
 <?php include_once 'includes/footer.php'; ?>
     <!-- Load Google Translate Script -->
