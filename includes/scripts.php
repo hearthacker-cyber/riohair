@@ -38,15 +38,23 @@
 
     // Custom Language Switcher
     function changeLanguage(langCode) {
-        var select = document.querySelector('.goog-te-combo');
-        if (select) {
-            select.value = langCode;
-            select.dispatchEvent(new Event('change'));
-            updateLanguageUI(langCode);
-        } else {
+        // Robustly clear potential conflicting cookies
+        // We clear for root path, current path, and domains to be safe
+        const cookiesToClear = [
+            'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;',
+            'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=' + window.location.hostname + ';',
+            'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.' + window.location.hostname + ';'
+        ];
+
+        cookiesToClear.forEach(cookie => document.cookie = cookie);
+        
+        if (langCode !== 'en') {
+            // Set the cookie for the target language
             setCookie('googtrans', '/en/' + langCode, 1);
-            location.reload();
         }
+        
+        // Reload to apply changes
+        location.reload();
     }
 
     function setCookie(key, value, expiry) {
