@@ -1,4 +1,4 @@
-<?php 
+﻿<?php 
 // ADD THIS AT THE VERY TOP OF THE FILE
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
@@ -480,30 +480,6 @@ include_once 'includes/header.php';
         /* These elements won't be translated */
     }
 </style>
-</head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-        <div class="container">
-           <a class="navbar-brand notranslate" href="index.php">Rio<span>Hair</span>Co.</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.php">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="product.php">Product</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="contact.php">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
 
     <!-- Google Translate Element (Hidden) -->
     <div id="google_translate_element"></div>
@@ -741,52 +717,3 @@ include_once 'includes/header.php';
     </section>
 
 <?php include_once 'includes/footer.php'; ?>
-
-    <!-- Load Google Translate Script -->
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    
-    <script>
-        // Navbar background on scroll
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('navbar-scrolled');
-                navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
-                navbar.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.1)';
-            } else {
-                navbar.classList.remove('navbar-scrolled');
-                navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
-                navbar.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.05)';
-            }
-        });
-
-        // Remove the old JavaScript form submission since we're using PHP now
-        // document.getElementById('contactForm').addEventListener('submit', function(e) {
-        //     e.preventDefault();
-        //     
-        //     // Get form values
-        //     const firstName = document.getElementById('firstName').value;
-        //     const email = document.getElementById('email').value;
-        //     const inquiryType = document.getElementById('inquiryType').value;
-        //     const message = document.getElementById('message').value;
-        //     
-        //     // Simple validation
-        //     if (firstName && email && inquiryType && message) {
-        //         // In a real application, you would send this data to a server
-        //         // For now, we'll just show an alert
-        //         alert('Thank you, ' + firstName + '! Your ' + inquiryType + ' inquiry has been sent. We will contact you at ' + email + ' shortly.');
-        //         
-        //         // Reset form
-        //         document.getElementById('contactForm').reset();
-        //     } else {
-        //         alert('Please fill in all required fields.');
-        //     }
-        // });
-
-        // Language Selector Functionality (keep if you enable it later)
-        document.addEventListener('DOMContentLoaded', function() {
-            // Your existing language selector code can stay
-        });
-    </script>
-</body>
-</html>
