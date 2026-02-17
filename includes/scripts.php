@@ -16,8 +16,6 @@
             navbar.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.05)';
         }
     });
-    });
-
     // Google Translate Init
     function googleTranslateElementInit() {
         new google.translate.TranslateElement({
@@ -44,21 +42,17 @@
         if (select) {
             select.value = langCode;
             select.dispatchEvent(new Event('change'));
+            updateLanguageUI(langCode);
         } else {
-            // Fallback if widget script hasn't loaded (rare)
-            // Or if custom widget structure differs
-           setCookie('googtrans', '/en/' + langCode, 1);
-           location.reload();
+            setCookie('googtrans', '/en/' + langCode, 1);
+            location.reload();
         }
-        
-        // Update UI text (optional, but good for UX)
-        updateLanguageUI(langCode);
     }
 
     function setCookie(key, value, expiry) {
         var expires = new Date();
         expires.setTime(expires.getTime() + (expiry * 24 * 60 * 60 * 1000));
-        document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
+        document.cookie = key + '=' + value + ';expires=' + expires.toUTCString() + ';path=/';
     }
     
     function updateLanguageUI(langCode) {
